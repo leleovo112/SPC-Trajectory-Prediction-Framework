@@ -1,0 +1,34 @@
+# configs/train.yaml
+# Training-specific overrides (applied on top of default.yaml values via config.py).
+
+model:
+  d_model:    256
+  intent_dim: 128
+  n_actions:  12
+
+train:
+  batch_size:   8
+  epochs:       20
+  lr:           1.0e-4
+  weight_decay: 0.01
+  grad_clip:    1.0
+  device:       cuda:0
+  num_workers:  4
+  seed:         42
+
+llm:
+  provider:    openai
+  model:       gpt-4-turbo
+  temperature: 0.0
+  max_tokens:  1024
+
+loss_weights:
+  reg:    1.0
+  intent: 0.5
+  phy:    0.1
+  scene:  0.1
+
+logging:
+  save_ckpt_dir: /home/carla_user/checkpoints
+  output_dir:    /home/carla_user/results
+  llm_cache_dir: /home/carla_user/llm_cache

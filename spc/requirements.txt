@@ -1,0 +1,23 @@
+# SPC Framework – Python dependencies
+# Tested with Python 3.10+
+
+# Deep learning
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Scientific computing
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# LLM API clients
+openai>=1.10.0
+
+# Rate limiting for API calls
+ratelimit>=2.2.1
+
+# Config & data I/O
+pyyaml>=6.0
+tqdm>=4.65.0
+
+# Optional: TensorBoard visualisation
+tensorboard>=2.14.0
